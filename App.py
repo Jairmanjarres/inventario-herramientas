@@ -91,7 +91,7 @@ else:
     usuario_actual = st.session_state.usuario_autenticado
     
     with st.sidebar:
-        st.write(f"### Técnico: **{usuario_actual}** 👷‍♂️")
+        st.write(f"### Lider: **{usuario_actual}** 👷‍♂️")
         if st.button("Cerrar Sesión"):
             st.session_state.usuario_autenticado = None
             st.rerun()
