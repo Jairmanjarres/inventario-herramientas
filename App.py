@@ -2,11 +2,23 @@ import streamlit as st
 import requests
 import base64
 from datetime import datetime
+from PIL import Image  # <--- Agregamos esto para asegurar que el logo cargue bien
+
+# 1. Cargar la imagen del logo de forma segura
+try:
+    img_logo = Image.open("logo.png")
+) except:
+    img_logo = "💻"  # Por si acaso no encuentra el archivo temporalmente
+
+# 2. Configurar la pestaña (¡SOLO ESTA VEZ, BORRA LA LÍNEA 14 ANTERIOR!)
 st.set_page_config(
     page_title="Inventario Erco",
-    page_icon="logo.png",  # <--- Aquí le indicamos que use tu imagen como ícono
+    page_icon=img_logo,
     layout="centered"
 )
+
+# 3. Mostrar el logo GRANDE en la pantalla de la aplicación
+st.image("logo.png", width=180)
 # 💻 CONFIGURACIÓN DIRECTA CON TUS ENLACES DE GOOGLE
 API_URL = "https://script.google.com/macros/s/AKfycbx3vMau5fmFIhQSXS0Aa1MP42PnP6GCeaJ_zCiPIPvaMvv2pu5jzmcZrld8-Mn3mHkeZA/exec"
 FOLDER_ID = "automatizado"
