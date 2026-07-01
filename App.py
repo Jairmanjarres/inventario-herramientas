@@ -7,7 +7,7 @@ from PIL import Image  # <--- Agregamos esto para asegurar que el logo cargue bi
 # 1. Cargar la imagen del logo de forma segura
 try:
     img_logo = Image.open("logo.png")
-) except:
+ except:
     img_logo = "💻"  # Por si acaso no encuentra el archivo temporalmente
 
 # 2. Configurar la pestaña (¡SOLO ESTA VEZ, BORRA LA LÍNEA 14 ANTERIOR!)
