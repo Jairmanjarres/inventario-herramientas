@@ -2,7 +2,11 @@ import streamlit as st
 import requests
 import base64
 from datetime import datetime
-
+st.set_page_config(
+    page_title="Inventario Erco",
+    page_icon="logo.png",  # <--- Aquí le indicamos que use tu imagen como ícono
+    layout="centered"
+)
 # 💻 CONFIGURACIÓN DIRECTA CON TUS ENLACES DE GOOGLE
 API_URL = "https://script.google.com/macros/s/AKfycbx3vMau5fmFIhQSXS0Aa1MP42PnP6GCeaJ_zCiPIPvaMvv2pu5jzmcZrld8-Mn3mHkeZA/exec"
 FOLDER_ID = "automatizado"
